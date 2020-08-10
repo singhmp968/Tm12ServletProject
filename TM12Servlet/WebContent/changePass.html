@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+
+<script type="text/javascript">
+
+function clickMe(){
+
+	var newPass = document.card.password.value;
+	var retypPass = document.card.cnfPass.value;
+	var pa1=false;
+
+	if(pass!=cnfpass){
+		pa1=false;
+	}
+	else{
+		pa1=true
+	}
+
+	if(pa1){
+		return true
+	}
+	else{
+		alert("password doesnot match")
+	return false;
+
+	}
+
+	}
+
+
+</script>
+
+
+<body>
+
+<div class="container">
+<div class="row">
+
+
+<div class="col-md-6 offset-md-3">
+<form name="card" onsubmit="return clickMe()" action="changePass" method="post">
+
+<div class="card-header bg-dark text-white">
+<h3>Change Password</h3>
+</div>
+
+<div class="card-body bg-secondary">
+<div class="form-group">
+<input name = "email" type="email" class="form-control" placeholder="Enter Emil i.e your email id">
+</div>
+<div class="form-group">
+<input name="oldPass" type="password" class="form-control" placeholder="Enter old password">
+</div>
+
+<div class="form-group">
+<input name="newPass" type="password" class="form-control" placeholder="Enter new  password">
+</div>
+
+<div class="form-group">
+<input name="retypePass" type="password" class="form-control" placeholder="Retype your password">
+</div>
+
+
+
+</div>
+<div class="card-footer text-center bg-dark text-white">
+<button type="submit" class="btn btn-outline-light">Login</button>
+
+
+</body>
+</html>
